@@ -1,0 +1,27 @@
+{
+  "topic": "Algorithmus",
+  "user_questions": {
+    "language": [
+      "In welcher Programmiersprache sollte dieser Algorithmus geschrieben sein?",
+      "Welche Programmiersprache sollte genutzt werden?"
+    ],
+    "algorithm": [
+      "Wie war der Name des Algorithmus?",
+      "Wie heißt der Algorithmus?"
+    ],
+    "generator": [
+      "Ihr Code:",
+      "Sehen sie:"
+    ]
+  },
+  "needed_information": {
+    "language": "",
+    "algorithm": "",
+    "generator": ""
+  },
+  "gpt_questions": {
+    "language": "What is the name of the requested programming language in a single word?\nIf none is specified  answer 'none'.\n\n",
+    "algorithm": "What is the name of the requested algorithm in a single word?\nIf none is specified  answer 'none'.\n\n",
+    "generator": "Write a insert_2 sentence in insert_1.\n\nCode:"
+  }
+}

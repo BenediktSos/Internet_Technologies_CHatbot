@@ -1,0 +1,27 @@
+{
+  "topic": "topic_name",
+  "user_questions": {
+    "question_1": [
+      "your text 1",
+      "your text 2"
+    ],
+    "question_2": [
+      "your text 3",
+      "your text 4"
+    ],
+    "generator": [
+      "your text 5",
+      "your text 6"
+    ]
+  },
+  "needed_information": {
+    "question_1": "",
+    "question_2": "",
+    "generator": ""
+  },
+  "gpt_questions": {
+    "question_1": "your text 7",
+    "question_2": "your text 8",
+    "generator": "your text 9"
+  }
+}

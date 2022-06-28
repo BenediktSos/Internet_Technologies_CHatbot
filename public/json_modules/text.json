@@ -1,0 +1,28 @@
+{
+  "topic": "text",
+  "user_questions": {
+    "language": [
+      "In welcher Sprache sollte dieser Text geschrieben sein?",
+      "Welche Sprache sollte genutzt werden?",
+      "In welcher Sprache soll der Absatz generiert werden?"
+    ],
+    "topic": [
+      "Zu welchem Thema sollte der Absatz passen?",
+      "Welches Thema soll der Text behandeln?"
+    ],
+    "generator": [
+      "Der Text lautet:",
+      "Der generierte Absatz ist:"
+    ]
+  },
+  "needed_information": {
+    "language": "",
+    "topic": "",
+    "generator": ""
+  },
+  "gpt_questions": {
+    "language": "What is the name of the requested language in a single word?\nIf none is specified  answer 'none'.\n\n",
+    "opportunity": "What is the name of the requested topic in a single word?\nIf none is specified  answer 'none'.\n\n",
+    "generator": "Write a text about insert_2 in insert_1.\n\nCode:"
+  }
+}

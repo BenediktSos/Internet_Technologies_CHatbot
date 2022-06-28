@@ -1,0 +1,50 @@
+<html><head><script src="/js/jquery.js"></script>
+</head>
+<body>
+    <div id="msgs" style="height:400px; width:400px; overflow: scroll; float:left;">
+    </div>
+    <div id="users" style="height:400px; width:100px; overflow: scroll;">
+    </div>
+    <form id="chatForm">
+        <label for="msg">u1:&nbsp;</label>
+        <input id="msg" type="text"/>
+        <button id="sendBtn">Send</button>
+        <div id="message-field">
+            <script>
+                var socket = new WebSocket('ws://localhost:8181/', 'chat');
+                var name = 'u1'
+                socket.onopen = function () {
+
+                    name = "name" + Math.floor(Math.random() * Math.floor(700));
+
+                    socket.send('{"type": "join", "name":" '+name+'"}');
+                }
+                $('#sendBtn').on('click', function (e) {
+                    e.preventDefault();
+                    //name = 'u1',
+                    msg = $('#msg').val();
+                    socket.send('{"type": "msg", "msg": "' + msg + '"}');
+                    $('#msg').val('');
+                });
+                socket.onmessage = function (msg) {
+                    var data = JSON.parse(msg.data);
+                    switch (data.type) {
+                        case 'msg':
+                            var msg = $('<div>' + data.name + ': ' + data.msg +
+                                    '</div>');
+                            $('#msgs').append(msg);
+                            break;
+                        case 'join':
+                            $('#users').empty();
+                            for (var i = 0; i < data.names.length; i++) {
+                                var user = $('<div>' + data.names[i] + '</div>');
+                                $('#users').append(user);
+                            }
+                            break;
+                    }
+                };
+                </script>
+            </div>    
+        </form>
+    </body>
+</html>

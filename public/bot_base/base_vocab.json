@@ -1,0 +1,14 @@
+{
+  "repeat_last":
+  [
+    "Es tut mir leid, aber ich habe sie nicht verstanden. ",
+    "Ich glaube, das habe ich nicht verstanden. ",
+    "Das habe ich jetzt nicht verstanden. "
+  ],
+  "request_topic": [
+    "Bitte wählen sie eines der Themen: ",
+    "Ich glaube, das habe ich nicht verstanden. Wählen sie bitte aus den Themen: ",
+    "Das habe ich jetzt nicht verstanden. Entscheiden sie sich für eines der Themen: "
+
+  ]
+}
