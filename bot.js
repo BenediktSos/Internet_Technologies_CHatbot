@@ -152,7 +152,7 @@ class bot {
                 break;
             }
         }
-        if (intent === null) {
+        if(this.intent === null){
             this.reset().catch(e => console.log(e));
         }
     }
@@ -193,7 +193,7 @@ class bot {
             const msg = '{"type": "msg", "name": "' + "GPT-3" + '", "msg":"' + responseMsg + '"}';
             console.log('Send(GPT-Response): ' + msg)
             this.client.con.sendUTF(msg)
-            await this.reset()
+            await this.reset().catch(e=>console.log(e));
         } catch (e) {
             console.log(e);
         }

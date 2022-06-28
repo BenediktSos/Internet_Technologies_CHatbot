@@ -82,16 +82,16 @@ wss.on('request', function (request) {
     // Sende alle daten an alle verbundenen Sockets
     for (var key in connections) {
       if (connections[key] && connections[key].send) {
-        connections[key].send(msg)
+        connections[key].send(msg);
       }
     }
 
     // Leite die Daten des Users an den Bot weiter, damit der antworten kann
     if (uname !== 'Chadbot' && utype === 'msg') {
-      await myBot.post(umsg).catch()
+      await myBot.post(umsg).catch();
     }
     if(utype !== 'msg'){
-      await myBot.reset()
+      await myBot.reset().catch(e=>console.log(e));
     }
   })
 })
