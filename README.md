@@ -3,3 +3,5 @@
 Requires a .env file with an openai api key in the following format:
 
 OPENAI_API_KEY=(api key here)
+
+The file has to be in the root directory
